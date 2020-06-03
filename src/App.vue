@@ -24,10 +24,12 @@
       <div class="left">距离下班时间还有：</div>
       <div class="right">{{outtime}}毫秒</div>
     </div>
+    <star></star>
   </div>
 </template>
 
 <script>
+  import star from '@/components/star.vue'
   export default {
     data() {
       return {
@@ -85,7 +87,7 @@
       }
     },
     components: {
-
+      star
     }
   }
 </script>
@@ -95,8 +97,14 @@
   html {
     height: 100%;
   }
-
+  *{
+    padding: 0px;
+    margin: 0px;
+  }
   .all {
+    color: white;
+    background: url("~@/assets/bg_1.jpg");
+    background-size: cover;
     height: 100%;
     display: flex;
     justify-content: center;
