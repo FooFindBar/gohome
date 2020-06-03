@@ -14,6 +14,21 @@
 
       }
     },
+    // created() {
+    //   this.timer()
+    // },
+    // methods: {
+    //   changerouter(){
+    //     var date = new Date();
+    //     var hour = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+    //     console.log(hour);
+    //   },
+    //   timer() {
+    //     return setInterval(() => {
+    //       this.changerouter()
+    //     }, 1)
+    //   }
+    // },
     components: {
       star,
       yanhua

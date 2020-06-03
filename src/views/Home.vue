@@ -70,9 +70,10 @@
         this.outmm = (this.outtime / 1000 / 60).toFixed(4)
         this.outhh = (this.outtime / 1000 / 60 / 60).toFixed(4)
         this.outnow = this.formatDuring(this.outtime)
-        if (this.outtime<=0) {
-          console.log("aa"+this.outtime)
-          this.$router.push('/About')
+        if(a>=32400000&&a<64800000){
+          if(this.$route.path!="/Home") this.$router.push('/Home')
+        }else{
+          if(this.$route.path!="/About") this.$router.push('/About')
         }
       },
       // 这是一个定时器
