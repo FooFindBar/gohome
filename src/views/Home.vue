@@ -65,7 +65,7 @@
         this.milliSeconds = date.getMilliseconds();
         this.datenow = this.year + '-' + this.month + '-' + this.date + ' ' + this.hour + ':' + this.minute + ':' + this.second + '.' + this.milliSeconds;
         var a = (this.hour * 3600000) + (this.minute * 60000) + (this.second * 1000) + this.milliSeconds
-        this.outtime = 34800000 - a
+        this.outtime = 64800000 - a
         this.outss = (this.outtime / 1000).toFixed(4)
         this.outmm = (this.outtime / 1000 / 60).toFixed(4)
         this.outhh = (this.outtime / 1000 / 60 / 60).toFixed(4)
