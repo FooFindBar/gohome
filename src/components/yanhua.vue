@@ -1,9 +1,5 @@
 <template>
  <div>
-
-
-    <div class="bomb-rocket"></div>
-    <div class="bomb-rocket"></div>
     <div class="bomb-rocket"></div>
     <div class="bomb-rocket"></div>
     <div class="bomb-rocket"></div>
