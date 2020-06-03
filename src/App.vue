@@ -76,7 +76,7 @@
       timer() {
         return setInterval(() => {
           this.getData()
-        }, 100)
+        }, 1)
       },
       formatDuring(mss) {
         var days = parseInt(mss / (1000 * 60 * 60 * 24));
@@ -135,7 +135,7 @@
     margin-top: 20px;
     font-size: 20px;
     font-family: "黑体";
-    box-shadow: 5px 5px 10px #666666, inset 5px 5px 10px #666666;
+    box-shadow: 5px 5px 100px #020c25, inset 5px 5px 100px #020c25;
     border-radius: 5px;
   }
 </style>
