@@ -18,7 +18,7 @@
     <div class="normal-rocket"></div>
     <div class="normal-rocket"></div>
     <div class="normal-rocket"></div>
-    <div class="text">下班了！！</div>
+    <div class="text">下班了！！！</div>
  </div>
 </template>
 

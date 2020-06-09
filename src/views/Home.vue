@@ -25,6 +25,7 @@
       <div class="right">{{outtime}}毫秒</div>
     </div>
     <star></star>
+    <vue-particles style="width: 100%;height: 100%; position: fixed;" color="#dedede"></vue-particles>
   </div>
 </template>
 
@@ -33,6 +34,12 @@
   export default {
     data() {
       return {
+        //计时器刷新频率毫秒制度
+        changetime:999,
+        // 你要上班的时间24小时制
+        gowork:9,
+        // 你下班的时间24小时制
+        gohome:18,
         datenow: '',
         outnow: '',
         year: '',
@@ -65,12 +72,12 @@
         this.milliSeconds = date.getMilliseconds();
         this.datenow = this.year + '-' + this.month + '-' + this.date + ' ' + this.hour + ':' + this.minute + ':' + this.second + '.' + this.milliSeconds;
         var a = (this.hour * 3600000) + (this.minute * 60000) + (this.second * 1000) + this.milliSeconds
-        this.outtime = 64800000 - a
+        this.outtime = (this.gohome*60*60*1000) - a
         this.outss = (this.outtime / 1000).toFixed(4)
         this.outmm = (this.outtime / 1000 / 60).toFixed(4)
         this.outhh = (this.outtime / 1000 / 60 / 60).toFixed(4)
         this.outnow = this.formatDuring(this.outtime)
-        if(a>=32400000&&a<64800000){
+        if(a>=this.gowork*60*60*1000&&a<this.gohome*60*60*1000){
           if(this.$route.path!="/Home") this.$router.push('/Home')
         }else{
           if(this.$route.path!="/About") this.$router.push('/About')
@@ -80,7 +87,7 @@
       timer() {
         return setInterval(() => {
           this.getData()
-        }, 1)
+        }, this.changetime)
       },
       formatDuring(mss) {
         var days = parseInt(mss / (1000 * 60 * 60 * 24));
